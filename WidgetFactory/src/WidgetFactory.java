@@ -1,3 +1,7 @@
+import com.sun.jmx.snmp.EnumRowStatus;
+
+import javax.swing.*;
+
 public class WidgetFactory {
 
     /*
@@ -28,4 +32,24 @@ public class WidgetFactory {
      Profit: $760.00
 
      */
+
+    public static void main(String[] args) {
+
+        int numberWidgets = Integer.parseInt(JOptionPane.showInputDialog("How many widgets are there"));
+
+
+
+
+        int numberDays = Math.round(numberWidgets/10/16+1) ;
+        double totalCost = numberWidgets * 10;
+        double costProduction =numberDays * 2 * 8 * 5 * 16.50;
+        double profit = totalCost - costProduction;
+
+
+
+
+
+        JOptionPane.showMessageDialog(null, "Number Of Widgets:" + numberWidgets +"\n # of Days:" + numberDays + "\n cost of Widgets" + costProduction + "\n Profit " + profit);
+    }
+
 }
